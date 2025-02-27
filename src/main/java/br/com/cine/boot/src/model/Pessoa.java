@@ -3,10 +3,10 @@ package br.com.cine.boot.src.model;
 public class Pessoa {
     private String nome;
     private int idade;
-    private int CPF;
+    private String CPF;
     private String email;
 
-    public Pessoa(String nome, int idade, int CPF, String email) {
+    public Pessoa(String nome, int idade, String CPF, String email) {
         this.nome = nome;
         this.idade = idade;
         this.CPF = CPF;
@@ -29,11 +29,11 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public int getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(int CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
 
@@ -43,5 +43,9 @@ public class Pessoa {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    @Override
+    public String toString() {
+        return "funcionou, o seu nome é: "+getNome();
     }
 }

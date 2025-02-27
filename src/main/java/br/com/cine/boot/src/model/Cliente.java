@@ -5,7 +5,7 @@ public class Cliente extends Pessoa{
     private String tipoCliente;
     private Double saldoCarteira;
 
-    public Cliente(double saldoCarteira,String tipoCliente,String nome, int idade, int CPF, String email) {
+    public Cliente(double saldoCarteira,String tipoCliente,String nome, int idade, String CPF, String email) {
         super(nome, idade, CPF, email);
         this.saldoCarteira = 0.0;
         this.tipoCliente = tipoCliente;
