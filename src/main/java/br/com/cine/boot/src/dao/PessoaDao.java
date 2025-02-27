@@ -1,4 +1,4 @@
-package br.com.cineBoot.src.dao;
+package br.com.cine.boot.src.dao;
 
 public class PessoaDao {
     public String nome;

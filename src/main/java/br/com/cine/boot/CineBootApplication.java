@@ -1,4 +1,4 @@
-package br.com.cineBoot;
+package br.com.cine.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
