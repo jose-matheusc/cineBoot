@@ -3,12 +3,13 @@ package br.com.cine.boot.src.model;
 import br.com.cine.boot.src.model.Pessoa;
 
 public class Filme {
-    Pessoa pessoa;
-    String titulo;
-    String genero;
-    int classificacaoIndicativa;
-    int duracao;
-    String sinopse;
+    private Long id;
+    private Pessoa pessoa;
+    private String titulo;
+    private String genero;
+    private int classificacaoIndicativa;
+    private int duracao;
+    private String sinopse;
 
     public Filme(br.com.cine.boot.src.model.Pessoa pessoa, String titulo, String genero, String sinopse, int classificacaoIndicativa, int duracao) {
         this.pessoa = pessoa;
