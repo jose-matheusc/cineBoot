@@ -1,19 +1,17 @@
 package br.com.cine.boot.src.model;
 
-import br.com.cine.boot.src.model.Filme;
-
 import java.time.LocalTime;
 
 public class Sessao {
     Filme filme;
-    int Sala;
+    int sala;
     LocalTime horario;
     double preco;
     int lugaresDisponiveis;
 
     public Sessao(Filme filme, int Sala, LocalTime horario, double preco, int lugaresDisponiveis) {
         this.filme = filme;
-        this.Sala = Sala;
+        this.sala = Sala;
         this.horario = horario;
         this.preco = preco;
         this.lugaresDisponiveis = lugaresDisponiveis;
@@ -28,11 +26,11 @@ public class Sessao {
     }
 
     public int getSala() {
-        return Sala;
+        return sala;
     }
 
     public void setSala(int sala) {
-        Sala = sala;
+        this.sala = sala;
     }
 
     public LocalTime getHorario() {
