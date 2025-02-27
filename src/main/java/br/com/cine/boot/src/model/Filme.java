@@ -1,16 +1,16 @@
 package br.com.cine.boot.src.model;
 
-import br.com.cineBoot.src.model.Pessoa;
+import br.com.cine.boot.src.model.Pessoa;
 
 public class Filme {
-    br.com.cineBoot.src.model.Pessoa pessoa;
+    Pessoa pessoa;
     String titulo;
     String genero;
     int classificacaoIndicativa;
     int duracao;
     String sinopse;
 
-    public Filme(br.com.cineBoot.src.model.Pessoa pessoa, String titulo, String genero, String sinopse, int classificacaoIndicativa, int duracao) {
+    public Filme(br.com.cine.boot.src.model.Pessoa pessoa, String titulo, String genero, String sinopse, int classificacaoIndicativa, int duracao) {
         this.pessoa = pessoa;
         this.titulo = titulo;
         this.genero = genero;
@@ -19,7 +19,7 @@ public class Filme {
         this.sinopse = sinopse;
     }
 
-    public br.com.cineBoot.src.model.Pessoa getPessoa() {
+    public br.com.cine.boot.src.model.Pessoa getPessoa() {
         return pessoa;
     }
 
