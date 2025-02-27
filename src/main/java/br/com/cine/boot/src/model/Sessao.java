@@ -1,4 +1,6 @@
-package br.com.cineBoot.src.model;
+package br.com.cine.boot.src.model;
+
+import br.com.cine.boot.src.model.Filme;
 
 import java.time.LocalTime;
 
