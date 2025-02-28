@@ -1,0 +1,8 @@
+CREATE TABLE Pessoa (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    idade INT NOT NULL,
+    cpf VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
+    tipo_pessoa VARCHAR(50) NOT NULL
+);
