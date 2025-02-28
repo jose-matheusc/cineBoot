@@ -3,13 +3,13 @@ package br.com.cine.boot.src.model;
 public class Pessoa {
     private String nome;
     private int idade;
-    private String CPF;
+    private String cpf;
     private String email;
 
-    public Pessoa(String nome, int idade, String CPF, String email) {
+    public Pessoa(String nome, int idade, String cpf, String email) {
         this.nome = nome;
         this.idade = idade;
-        this.CPF = CPF;
+        this.cpf = cpf;
         this.email = email;
     }
 
@@ -29,12 +29,12 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
