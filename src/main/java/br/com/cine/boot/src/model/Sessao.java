@@ -18,6 +18,14 @@ public class Sessao {
         this.lugaresDisponiveis = lugaresDisponiveis;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Filme getFilme() {
         return filme;
     }
