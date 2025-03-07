@@ -9,21 +9,21 @@ import java.util.List;
 
 public class SessaoService {
     private List<Sessao> sessoes = new ArrayList<>();
-    private Long idCounter = 1L; // Para gerar IDs únicos
+    private Long idCounter = 1L;
 
-    // Criar uma nova sessão
+
     public void adicionarSessao(Sessao sessao) {
         sessao.setId(idCounter++);
         sessoes.add(sessao);
         System.out.println("Sessão adicionada com sucesso para o filme: " + sessao.getFilme().getTitulo());
     }
 
-    // Remover sessão pelo ID
+
     public boolean removerSessao(Long id) {
         return sessoes.removeIf(sessao -> sessao.getId().equals(id));
     }
 
-    // Buscar sessões por filme
+
     public List<Sessao> buscarSessoesPorFilme(Filme filme) {
         List<Sessao> resultado = new ArrayList<>();
         for (Sessao sessao : sessoes) {
@@ -34,7 +34,7 @@ public class SessaoService {
         return resultado;
     }
 
-    // Buscar sessões por sala
+
     public List<Sessao> buscarSessoesPorSala(Sala sala) {
         List<Sessao> resultado = new ArrayList<>();
         for (Sessao sessao : sessoes) {
@@ -45,7 +45,7 @@ public class SessaoService {
         return resultado;
     }
 
-    // Buscar sessões por horário
+
     public List<Sessao> buscarSessoesPorHorario(LocalTime horario) {
         List<Sessao> resultado = new ArrayList<>();
         for (Sessao sessao : sessoes) {
@@ -56,7 +56,7 @@ public class SessaoService {
         return resultado;
     }
 
-    // Atualizar sessão (horário, preço, lugares disponíveis)
+
     public boolean atualizarSessao(Long id, LocalTime novoHorario, double novoPreco, int novosLugares) {
         for (Sessao sessao : sessoes) {
             if (sessao.getId().equals(id)) {
@@ -70,12 +70,12 @@ public class SessaoService {
         return false;
     }
 
-    // Listar todas as sessões
+
     public List<Sessao> listarSessoes() {
         return sessoes;
     }
 
-    // Reduzir lugares disponíveis ao vender ingresso
+
     public boolean venderIngresso(Long sessaoId) {
         for (Sessao sessao : sessoes) {
             if (sessao.getId().equals(sessaoId) && sessao.getLugaresDisponiveis() > 0) {
