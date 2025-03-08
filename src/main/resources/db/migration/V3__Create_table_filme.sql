@@ -5,6 +5,5 @@ CREATE TABLE Filme (
     genero VARCHAR(50),
     classificacao_indicativa INT,
     duracao INT,
-    sinopse TEXT,
-    FOREIGN KEY (pessoa_id) REFERENCES Pessoa(id)
+    sinopse TEXT
 );

@@ -1,9 +1,19 @@
 package br.com.cine.boot.src.model;
 
 import br.com.cine.boot.src.model.Pessoa;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
+
+@Entity
 public class Filme {
+
+    @Id
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id")
     private Pessoa pessoa;
     private String titulo;
     private String genero;
@@ -18,6 +28,10 @@ public class Filme {
         this.classificacaoIndicativa = classificacaoIndicativa;
         this.duracao = duracao;
         this.sinopse = sinopse;
+    }
+
+    public Filme() {
+
     }
 
     public Long getId() {

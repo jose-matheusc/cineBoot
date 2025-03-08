@@ -1,5 +1,6 @@
 package br.com.cine.boot.src.service;
 
+import br.com.cine.boot.src.model.Cliente;
 import br.com.cine.boot.src.model.Filme;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class FilmeService {
         for (int i = 0; i < filmes.size(); i++) {
             if (filmes.get(i).getId().equals(id)) {
                 filmes.set(i, novoFilme);
-                novoFilme.setId(id); // Mantém o mesmo ID
+                novoFilme.setId(id);
                 System.out.println("Filme atualizado: " + novoFilme.getTitulo());
                 return true;
             }

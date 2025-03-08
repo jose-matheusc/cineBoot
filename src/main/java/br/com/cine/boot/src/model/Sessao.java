@@ -1,10 +1,22 @@
 package br.com.cine.boot.src.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 import java.time.LocalTime;
 
+@Entity
 public class Sessao {
+
+    @Id
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "filme_id")
     private Filme filme;
+    @ManyToOne
+    @JoinColumn(name = "sala_id")
     private Sala sala;
     private LocalTime horario;
     private double preco;
@@ -16,6 +28,10 @@ public class Sessao {
         this.horario = horario;
         this.preco = preco;
         this.lugaresDisponiveis = lugaresDisponiveis;
+    }
+
+    public Sessao() {
+
     }
 
     public Long getId() {

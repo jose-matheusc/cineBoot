@@ -1,43 +1,11 @@
-package br.com.cine.boot.src.model;
+package br.com.cine.boot.src.dao;
 
-import jakarta.persistence.*;
-
-@Entity
-public class Ingresso {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class IngressoDAO {
     private String assento;
     private double precoFinal;
-
-    @JoinColumn(name = "cliente_id")
     private Long clienteId;
-
-    @JoinColumn(name = "pessoa_id")
     private Long pessoaId;
-
-    @JoinColumn(name = "sessao_id")
     private Long sessaoId;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Ingresso(String assento, double precoFinal) {
-        this.assento = assento;
-        this.precoFinal = precoFinal;
-    }
-
-    public Ingresso() {
-
-    }
-
     public String getAssento() {
         return assento;
     }
